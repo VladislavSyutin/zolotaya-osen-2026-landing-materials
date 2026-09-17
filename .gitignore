@@ -1,0 +1,8 @@
+.DS_Store
+.sites-runtime/
+.impeccable/
+.playwright-cli/
+*.tar.gz
+*.tgz
+node_modules/
+.env*
