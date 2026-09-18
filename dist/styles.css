@@ -18,3 +18,4 @@
 .activity{grid-template-columns:64px minmax(0,1fr)}.activity-icon{align-self:center;display:flex;align-items:center;justify-content:center;padding-top:0}.activity-icon img{width:64px;height:64px;object-fit:contain}
 @media(min-width:768px){.activity{grid-template-columns:96px minmax(0,1fr)}.activity-icon img{width:96px;height:96px}}
 .program-panel{background-image:linear-gradient(rgba(255,255,255,.58),rgba(255,255,255,.58)),url('assets/program-pattern.png');background-position:center;background-size:cover;background-repeat:no-repeat}
+.event-date{color:var(--ink)}.day{color:var(--ink)}
