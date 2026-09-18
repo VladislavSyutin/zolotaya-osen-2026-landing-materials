@@ -17,3 +17,4 @@
 @media(max-width:420px){.header{flex-direction:column;align-items:flex-start;gap:8px}.header-note{align-self:flex-end;max-width:28ch}.brand{width:min(210px,100%)}}
 .activity{grid-template-columns:64px minmax(0,1fr)}.activity-icon{align-self:center;display:flex;align-items:center;justify-content:center;padding-top:0}.activity-icon img{width:64px;height:64px;object-fit:contain}
 @media(min-width:768px){.activity{grid-template-columns:96px minmax(0,1fr)}.activity-icon img{width:96px;height:96px}}
+.program-panel{background:url('assets/program-pattern.png') center/cover no-repeat}
