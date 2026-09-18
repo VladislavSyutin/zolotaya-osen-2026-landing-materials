@@ -19,3 +19,5 @@
 @media(min-width:768px){.activity{grid-template-columns:96px minmax(0,1fr)}.activity-icon img{width:96px;height:96px}}
 .program-panel{background-image:linear-gradient(rgba(255,255,255,.58),rgba(255,255,255,.58)),url('assets/program-pattern.png');background-position:center;background-size:cover;background-repeat:no-repeat}
 .event-date{color:var(--ink)}.day{color:var(--ink)}
+.event-time{margin-top:0}
+@media(min-width:768px){.event-time{margin-top:16px}}
