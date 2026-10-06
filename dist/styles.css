@@ -21,3 +21,67 @@
 .event-date{color:var(--ink)}.day{color:var(--ink)}
 .event-time{margin-top:8px}
 @media(min-width:768px){.event-time{margin-top:8px}}
+
+[hidden]{display:none!important}
+.activity-cta{grid-column:2;justify-self:start;display:inline-flex;align-items:center;min-height:44px;margin-top:4px;color:var(--green);font-size:16px;font-weight:600;text-decoration-thickness:1px;text-underline-offset:4px}
+.activity-cta:focus-visible,.survey-button:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+.survey-option:focus-within .survey-option-text{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.survey-other-answer input:focus,.survey-field-label input:focus,.survey-field-label textarea:focus{outline:0;border:1px solid var(--green);background:var(--paper)}
+.survey-other-label:focus-within,.survey-field-label:focus-within{color:var(--green)}
+.survey{scroll-margin-top:160px;background:oklch(95.4% .01 140)}
+.survey-intro{display:grid;gap:20px;max-width:960px}
+.survey-intro p{max-width:55ch;color:var(--muted);font-size:17px}
+.survey-content{max-width:800px;margin-top:42px}
+.survey-app{width:100%}
+.survey-progress-block{display:grid;gap:14px;margin-bottom:38px}
+.survey-progress-copy{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.survey-step-count{font-size:16px;font-weight:600;color:var(--green)}
+.survey-required-note{font-size:14px;color:var(--muted)}
+.survey-progress{height:5px;overflow:hidden;background:oklch(85% .02 140)}
+.survey-progress-fill{display:block;width:7.15%;height:100%;background:var(--green);transition:width .2s ease-out}
+.survey-question{min-inline-size:0;margin:0;padding:0;border:0}
+.survey-question:focus{outline:0}
+.survey-question-title{max-width:70ch;margin:0 0 26px;padding:0;font-size:clamp(21px,2.5vw,30px);font-weight:500;line-height:1.3;letter-spacing:-.015em;text-wrap:pretty}
+.survey-question-hint{margin:-12px 0 20px;color:var(--muted);font-size:15px;line-height:1.5}
+.survey-option{display:flex;align-items:flex-start;gap:15px;min-height:56px;padding:15px 4px;cursor:pointer;line-height:1.5}
+.survey-option:hover{color:var(--green)}
+.survey-option input{position:relative;flex:0 0 auto;appearance:none;width:20px;height:20px;margin:3px 0 0;border:0;background:oklch(89% .012 140);cursor:pointer}
+.survey-option input[type=radio]{border-radius:50%}
+.survey-option input[type=checkbox]{border-radius:3px}
+.survey-option input[type=radio]:checked,.survey-option input[type=checkbox]:checked{background:var(--green)}
+.survey-option input[type=radio]:checked:after{position:absolute;inset:6px;content:'';border-radius:50%;background:white}
+.survey-option input[type=checkbox]:checked:after{position:absolute;inset:0;display:grid;place-items:center;content:'✓';color:white;font-size:14px;font-weight:700}
+.survey-option-text{max-width:68ch}
+.survey-other-answer{padding:4px 4px 15px 39px}
+.survey-other-label{display:block}
+.survey-other-answer input,.survey-field-label input,.survey-field-label textarea{width:100%;min-height:48px;padding:11px 13px;border:0;border-radius:4px;background:oklch(98% .002 145);color:var(--ink);font:inherit}
+.survey-other-answer input::placeholder{color:var(--muted);opacity:1}
+.survey-field-label{display:grid;gap:10px;max-width:640px;font-size:15px;color:var(--muted)}
+.survey-field-label textarea{min-height:136px;resize:vertical}
+.survey-matrix{display:grid;gap:16px}
+.survey-scale-description{max-width:75ch;margin-top:-8px}
+.survey-matrix-row{min-inline-size:0;margin:0;padding:0 0 16px;border:0}
+.survey-matrix-label{max-width:62ch;margin:0 0 12px;padding:0;font-size:16px;font-weight:500;line-height:1.4}
+.survey-rating-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.survey-rating-option{position:relative;display:block;min-width:0;cursor:pointer;text-align:center}
+.survey-rating-option input{position:absolute;width:1px;height:1px;opacity:0}
+.survey-rating-number{display:grid;min-height:44px;place-items:center;border:0;border-radius:4px;background:oklch(91% .01 140);color:var(--ink);font-size:16px}
+.survey-rating-option input:checked+.survey-rating-number{background:var(--green);color:white}
+.survey-rating-option input:focus-visible+.survey-rating-number{outline:0;color:var(--green);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.survey-error{margin:22px 0 0;color:oklch(40% .16 25);font-size:15px;font-weight:500}
+.survey-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:32px}
+.survey-button{display:inline-flex;min-width:132px;min-height:50px;align-items:center;justify-content:center;padding:12px 20px;border:0;border-radius:6px;font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.survey-button-primary{background:var(--green);color:white}
+.survey-button-primary:hover:not(:disabled){background:oklch(36% .12 145)}
+.survey-button-secondary{background:transparent;color:var(--green)}
+.survey-button-secondary:hover{background:oklch(92% .025 140)}
+.survey-button:disabled{cursor:wait;opacity:.7}
+.survey-success{max-width:640px;padding:28px 0;border-top:1px solid var(--line)}
+.survey-success:focus{outline:0}
+.survey-success h3{margin-bottom:12px;font-size:clamp(24px,3vw,32px)}
+.survey-success p{max-width:48ch;color:var(--muted);font-size:17px}
+.survey-notice{max-width:60ch;padding:18px 0;color:var(--muted)}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(min-width:768px){.survey-intro{grid-template-columns:1fr 1.4fr;align-items:start;gap:72px}.survey-progress-block{margin-bottom:46px}.survey-matrix{gap:18px}}
+@media(max-width:420px){.survey-progress-copy{align-items:flex-start;flex-direction:column;gap:4px}.survey-content{margin-top:32px}.survey-question-title{margin-bottom:22px}.survey-option{gap:12px;padding-block:13px}.survey-rating-options{gap:6px}.survey-rating-number{min-height:42px}.survey-button{min-width:112px;padding-inline:14px}}
+@media(prefers-reduced-motion:reduce){.survey-progress-fill{transition:none}}

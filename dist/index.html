@@ -8,8 +8,11 @@
   <meta name="description" content="7–10 октября 2026 года. Космический стенд РСХБ-Страхование, консультации по агрострахованию, фотозона и программа для посетителей. Стенд В-14.">
   <link rel="icon" type="image/svg+xml" href="assets/site-favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/site-favicon-48x48.png">
-  <link rel="stylesheet" href="styles.css?v=program-pattern-v3">
+  <link rel="stylesheet" href="styles.css?v=survey-form-v4">
   <script src="script.js" defer></script>
+  <script src="survey-data.js?v=survey-form-v3" defer></script>
+  <script src="survey-view.js?v=survey-form-v3" defer></script>
+  <script src="survey.js?v=survey-form-v3" defer></script>
 </head>
 <body>
   <header class="header">
@@ -47,7 +50,43 @@
           <article class="activity reveal"><span class="activity-icon" aria-hidden="true"><img src="assets/activity-consultation.png" width="32" height="32" alt=""></span><h3>Консультации<br>по агрострахованию</h3><p>Обсудить вопросы страхования и получить консультацию специалистов.</p></article>
           <article class="activity reveal"><span class="activity-icon" aria-hidden="true"><img src="assets/activity-materials.png" width="32" height="32" alt=""></span><h3>Экспертные материалы<br>и видеоролики</h3><p>Познакомиться с материалами РСХБ-Страхование об агростраховании.</p></article>
           <article class="activity reveal"><span class="activity-icon" aria-hidden="true"><img src="assets/activity-camera.png" width="32" height="32" alt=""></span><h3>Фотозона</h3><p>Сделать космическую фотографию на память.</p></article>
-          <article class="activity reveal"><span class="activity-icon" aria-hidden="true"><img src="assets/activity-gift.png" width="32" height="32" alt=""></span><h3>Онлайн-опрос с подарком</h3><p>Пройти онлайн-опрос и получить гарантированный подарок.</p></article>
+          <article class="activity reveal"><span class="activity-icon" aria-hidden="true"><img src="assets/activity-gift.png" width="32" height="32" alt=""></span><h3>Онлайн-опрос с подарком</h3><p>Пройти онлайн-опрос и получить гарантированный подарок.</p><a class="activity-cta" href="#survey">Пройти опрос</a></article>
+        </div>
+      </div>
+    </section>
+    <section class="survey section" id="survey" aria-labelledby="survey-title">
+      <div class="container">
+        <div class="survey-intro">
+          <h2 id="survey-title">Онлайн-опрос</h2>
+          <p>Ответьте на вопросы анкеты. После отправки покажите экран подтверждения сотруднику на стенде, чтобы получить подарок.</p>
+        </div>
+        <div class="survey-content">
+          <p class="survey-notice" id="survey-fallback">Форма не загрузилась. Включите JavaScript или обновите страницу.</p>
+          <div class="survey-app" id="survey-app" hidden>
+            <div class="survey-progress-block">
+              <div class="survey-progress-copy">
+                <p class="survey-step-count" id="survey-progress-label">Вопрос 1 из 14</p>
+                <p class="survey-required-note">Ответьте на каждый вопрос</p>
+              </div>
+              <div class="survey-progress" id="survey-progress" role="progressbar" aria-label="Прогресс опроса" aria-valuemin="0" aria-valuemax="14" aria-valuenow="1" aria-valuetext="Вопрос 1 из 14">
+                <span class="survey-progress-fill" id="survey-progress-fill"></span>
+              </div>
+            </div>
+            <!-- Подрядчик: добавьте URL настроенного эндпоинта в data-endpoint. Не размещайте здесь секретные ключи. -->
+            <form class="survey-form" id="survey-form" data-endpoint="" novalidate>
+              <div class="survey-step" id="survey-step" aria-live="polite"></div>
+              <p class="survey-error" id="survey-error" role="alert" hidden></p>
+              <div class="survey-actions">
+                <button class="survey-button survey-button-secondary" type="button" id="survey-back" hidden>Назад</button>
+                <button class="survey-button survey-button-primary" type="button" id="survey-next">Далее</button>
+                <button class="survey-button survey-button-primary" type="submit" id="survey-submit" hidden>Отправить ответы</button>
+              </div>
+            </form>
+            <div class="survey-success" id="survey-success" tabindex="-1" hidden>
+              <h3>Спасибо за ответы!</h3>
+              <p>Покажите этот экран сотруднику стенда, чтобы получить подарок.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
